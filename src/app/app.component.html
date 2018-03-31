@@ -2,6 +2,7 @@
   <mat-card style="height: 100%; box-sizing: border-box; padding:0">
     <file-explorer [fileElements]="fileElements | async" [path]="currentPath" [canNavigateUp]="canNavigateUp" (folderAdded)="addFolder($event)"
       (elementRemoved)="removeElement($event)" (navigatedDown)="navigateToFolder($event)" (navigatedUp)="navigateUp()" (elementRenamed)="renameElement($event)"
-      (elementMoved)="moveElement($event)"></file-explorer>
+      (elementMoved)="moveElement($event)">
+    </file-explorer>
   </mat-card>
 </div>

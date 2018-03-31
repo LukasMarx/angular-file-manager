@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, SimpleChanges, ViewChild, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { FileElement } from './model/element';
 import { MatMenu, MatMenuTrigger } from '@angular/material/menu';
 import { Observable } from 'rxjs/Observable';
@@ -11,7 +11,7 @@ import { RenameDialogComponent } from './modals/renameDialog/renameDialog.compon
   templateUrl: './file-explorer.component.html',
   styleUrls: ['./file-explorer.component.css']
 })
-export class FileExplorerComponent implements OnChanges {
+export class FileExplorerComponent {
   constructor(public dialog: MatDialog) {}
 
   @Input() fileElements: FileElement[];
@@ -21,11 +21,9 @@ export class FileExplorerComponent implements OnChanges {
   @Output() folderAdded = new EventEmitter<{ name: string }>();
   @Output() elementRemoved = new EventEmitter<FileElement>();
   @Output() elementRenamed = new EventEmitter<FileElement>();
-  @Output() navigatedDown = new EventEmitter<FileElement>();
   @Output() elementMoved = new EventEmitter<{ element: FileElement; moveTo: FileElement }>();
+  @Output() navigatedDown = new EventEmitter<FileElement>();
   @Output() navigatedUp = new EventEmitter();
-
-  ngOnChanges(changes: SimpleChanges): void {}
 
   deleteElement(element: FileElement) {
     this.elementRemoved.emit(element);
@@ -64,9 +62,8 @@ export class FileExplorerComponent implements OnChanges {
     });
   }
 
-  openMenu(event: MouseEvent, element: FileElement, viewChild: MatMenuTrigger) {
+  openMenu(event: MouseEvent, viewChild: MatMenuTrigger) {
     event.preventDefault();
-    console.log('context');
     viewChild.openMenu();
   }
 }

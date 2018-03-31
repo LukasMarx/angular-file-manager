@@ -62,7 +62,6 @@ export class AppComponent {
   }
 
   renameElement(element: FileElement) {
-    console.log(element);
     this.fileService.update(element.id, { name: element.name });
     this.updateFileElementQuery();
   }
