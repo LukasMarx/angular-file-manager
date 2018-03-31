@@ -7,11 +7,11 @@ import { NewFolderDialogComponent } from './modals/newFolderDialog/newFolderDial
 import { RenameDialogComponent } from './modals/renameDialog/renameDialog.component';
 
 @Component({
-  selector: 'file-manager',
-  templateUrl: './file-manager.component.html',
-  styleUrls: ['./file-manager.component.css']
+  selector: 'file-explorer',
+  templateUrl: './file-explorer.component.html',
+  styleUrls: ['./file-explorer.component.css']
 })
-export class FileManagerComponent implements OnChanges {
+export class FileExplorerComponent implements OnChanges {
   constructor(public dialog: MatDialog) {}
 
   @Input() fileElements: FileElement[];

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FileManagerComponent } from './file-manager.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatIconModule } from '@angular/material/icon';
@@ -13,6 +12,7 @@ import { NewFolderDialogComponent } from './modals/newFolderDialog/newFolderDial
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { RenameDialogComponent } from './modals/renameDialog/renameDialog.component';
+import { FileExplorerComponent } from './file-explorer.component';
 
 @NgModule({
   imports: [
@@ -28,8 +28,8 @@ import { RenameDialogComponent } from './modals/renameDialog/renameDialog.compon
     FormsModule,
     MatButtonModule
   ],
-  declarations: [FileManagerComponent, NewFolderDialogComponent, RenameDialogComponent],
-  exports: [FileManagerComponent],
+  declarations: [FileExplorerComponent, NewFolderDialogComponent, RenameDialogComponent],
+  exports: [FileExplorerComponent],
   entryComponents: [NewFolderDialogComponent, RenameDialogComponent]
 })
-export class FileManagerModule {}
+export class FileExplorerModule {}
