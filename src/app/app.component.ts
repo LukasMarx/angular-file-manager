@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FileElement } from './file-manager/model/element';
+import { FileElement } from './file-explorer/model/element';
 import { Observable } from 'rxjs/Observable';
 import { FileService } from './service/file.service';
 

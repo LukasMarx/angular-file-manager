@@ -7,7 +7,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatCardModule } from '@angular/material/card';
 import { environment } from '../environments/environment';
 import { FileService } from './service/file.service';
-import { FileExplorerModule } from './file-manager/file-explorer.module';
+import { FileExplorerModule } from './file-explorer/file-explorer.module';
 
 @NgModule({
   declarations: [AppComponent],
